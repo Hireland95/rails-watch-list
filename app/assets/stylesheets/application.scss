@@ -10,3 +10,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+#new_list {
+  background-color: rgb(63, 89, 215);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 0px;
+}
+
+.btn-flat {
+  background: rgb(127, 190, 128);
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.row {
+  padding: 5px 30px;
+}

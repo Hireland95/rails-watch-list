@@ -1,9 +1,25 @@
-<h1>All lists</h1>
 
-<ul>
-<% @lists.each do |list| %>
-  <li> <%= link_to list.name, list_path(list) %></li>
-<% end %>
-</ul>
 
-<h2><%= link_to "Create new list", new_list_path %></h2>
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1543536448-1e76fc2795bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1739&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="top">
+      <h2>My lists</h2>
+      <h2 class="btn btn-flat"><%= link_to "Create a movie list", new_list_path %></h2>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+        <% @lists.each do |list| %>
+          <div class="card-category col-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)"> <%= link_to list.name, list_path(list) %></div>
+        <% end %>
+  </div>
+</div>
