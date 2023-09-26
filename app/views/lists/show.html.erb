@@ -1,6 +1,5 @@
-<div class="container">
-<h2><%= @list.name %></h2>
-<%= cl_image_tag @list.photo.key, height: 200, width: 800, crop: :fill %>
+<div class="header my-5">
+  <h2><%= @list.name %></h2>
 </div>
 
 
@@ -17,5 +16,5 @@
 <%end %>
 </ul>
 
-<h3><%= link_to "All lists", lists_path %></h3>
-<h3><%= link_to "Create a bookmark", new_list_bookmark_path(@list) %></h3>
+<h3 class="btn btn-secondary"><%= link_to "All lists", lists_path %></h3>
+<h3 class="btn btn-primary"><%= link_to "Create a bookmark", new_list_bookmark_path(@list) %></h3>

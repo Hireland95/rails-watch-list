@@ -11,6 +11,11 @@
 @import "components/index";
 @import "pages/index";
 
+
+body {
+  padding-top: 200px;
+}
+
 .top {
   display: flex;
   justify-content: space-between;
@@ -30,9 +35,13 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .row {
   padding: 5px 30px;
+}
+
+.list-title {
+    color: red;
 }
