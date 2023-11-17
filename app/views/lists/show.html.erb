@@ -18,3 +18,22 @@
 
 <h3 class="btn btn-secondary"><%= link_to "All lists", lists_path %></h3>
 <h3 class="btn btn-primary"><%= link_to "Create a bookmark", new_list_bookmark_path(@list) %></h3>
+
+<% if @list.reviews.empty? %>
+<h1>Leave a review about <%= @list.name %> </h1>
+<% end  %>
+
+<% @list.reviews.each do |review| %>
+  <ul>
+    <li><%= review.comment %></li>
+    <li><%= "⭐️" * review.rating %></li>
+  </ul>
+  <h4 class="btn btn-warning"><%= link_to "Delete this review", review_path(review), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h4>
+<% end%>
+
+<h1> Add your review below! </h1>
+<%= simple_form_for [@list, @review] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :rating %>
+  <%= f.button :submit %>
+<% end %>
